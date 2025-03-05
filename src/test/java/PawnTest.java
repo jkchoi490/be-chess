@@ -19,5 +19,15 @@ public class PawnTest {
         Pawn blackPawn = new Pawn(black);
         assertThat(blackPawn.getColor()).isEqualTo(black);
 
+        verifyPawn(white);
+        verifyPawn(black);
+
     }
+
+    //중복 코드 제거를 위한 verifyPawn(final String color)
+    public void verifyPawn(final String color){
+        Pawn pawn = new Pawn(color);
+        assertThat(pawn.getColor()).isEqualTo(color);
+    }
+
 }
